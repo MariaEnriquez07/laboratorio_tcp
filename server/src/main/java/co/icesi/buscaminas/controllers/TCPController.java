@@ -165,9 +165,4 @@ public class TCPController {
 
     }
 
-    public Cell[][] markCell(int i, int j) {
-        game.markCell(i, j);
-        return game.getBoard();
-    }
-
 }
