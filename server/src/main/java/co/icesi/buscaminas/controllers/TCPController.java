@@ -132,7 +132,19 @@ public class TCPController {
                         response.status = "OK";
                         response.data.put("board", board);
                         break;
-
+                    case "MARK_CELL":
+                        int mi = Integer.parseInt(data.get("i"));
+                        int mj = Integer.parseInt(data.get("j"));
+                        try {
+                            services.markCell(mi, mj);
+                            response.status = "OK";
+                            board = services.printBoard();
+                            response.data.put("board", board);
+                        } catch (Exception e) {
+                            response.status = "ERROR";
+                            response.data.put("message", e.getMessage());
+                        }
+                        break;
                     default:
                         break;
                 }
@@ -151,6 +163,11 @@ public class TCPController {
             }
         }
 
+    }
+
+    public Cell[][] markCell(int i, int j) {
+        game.markCell(i, j);
+        return game.getBoard();
     }
 
 }
