@@ -39,7 +39,7 @@ public class TCPController {
     public TCPController(ServicesImpl services, int port) {
         this.services = services;
         try {
-            serverSocket = new ServerSocket(port, 10, InetAddress.getByName("192.168.131.214"));
+            serverSocket = new ServerSocket(port, 10, InetAddress.getByName("0.0.0.0")); // cambiar la IP 192.168.131.214 para que no quede hardcodeada
             executor = Executors.newFixedThreadPool(5);
             gson = new GsonBuilder().create();
         } catch (Exception e) {
