@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'co.icesi'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.code.gson:gson:2.10.1'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'co.icesi.buscaminas.client.MainClient'
+    }
+}
+
+task run(type: JavaExec) {
+    main = 'co.icesi.buscaminas.client.MainClient'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+tasks.named('run') {
+    standardInput = System.in
+}

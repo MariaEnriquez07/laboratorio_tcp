@@ -1,4 +1,4 @@
-package main.java.co.icesi.buscaminas.models;
+package co.icesi.buscaminas.models;
 
 public class Cell {
     private boolean isLandMine;
