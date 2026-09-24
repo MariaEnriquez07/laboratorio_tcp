@@ -1,5 +1,4 @@
 package co.icesi.buscaminas.client;
-
 import co.icesi.buscaminas.models.Request;
 import co.icesi.buscaminas.models.Response;
 import java.io.IOException;
