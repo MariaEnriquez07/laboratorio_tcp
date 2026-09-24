@@ -23,3 +23,7 @@ task run(type: JavaExec) {
     main = 'co.icesi.buscaminas.client.MainClient'
     classpath = sourceSets.main.runtimeClasspath
 }
+
+tasks.named('run') {
+    standardInput = System.in
+}

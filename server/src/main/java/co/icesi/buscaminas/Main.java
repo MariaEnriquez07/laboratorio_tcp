@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args)
     {
         ServicesImpl serv = new ServicesImpl();
-        new Thread(() -> apply(serv.getGame())).start();
+        //new Thread(() -> apply(serv.getGame())).start();
         // TCPController controller = new TCPController(serv);
         // controller.startService();
 
