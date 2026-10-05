@@ -1,4 +1,4 @@
-package main.java.co.icesi.buscaminas.models;
+package co.icesi.buscaminas.models;
 
 import java.util.HashMap;
 import java.util.Map;
